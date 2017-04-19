@@ -1,0 +1,121 @@
+ //About page template script for illusion.ai
+ //Example company: Make School https://www.makeschool.com/about
+
+ greeting: [
+          'We are very excited you are interested in learning more about us!',
+          'Make School was founded in 2012, we’ve taught over 2,000 students through in person courses and over 1.5 million students through online tutorials.',
+          'What else would you like to know about us?',
+          
+           
+          {
+            type: 'choose',
+            answers: [{
+              'text': 'What\'s your mission',
+              'path': 'mission'
+            },
+            {
+              'text': 'I\'d like to get in contact!',
+              'path': 'contact'
+            }]
+          }
+        ],
+
+        'mission': [
+          'We founded Make School to empower students to build and ship products.',
+          'Creating a product that improves the lives of others is a thrilling and fulfilling experience that opens the door to a successful career in tech.',
+          'We’re building the college experience we wished existed, one where our students love coming to school every day and are passionate about their work.',
+
+
+          {
+            type: 'choose',
+            answers: [{
+              'text': 'tell me more.',
+              'path': 'mission_cont'
+            },
+              {
+              'text': 'I\d like to know more about the team',
+              'path': 'team'
+            
+            }]
+          }
+        ],
+
+
+
+        'finalmessage': [
+          'You\'re welcome!',
+          'Thanks\'s for taking the time to learn more about us!',
+          'This conversation was powered by <a href="https://illusion.ai">illusion.ai</a>',
+          '<iframe src="//giphy.com/embed/GB0lKzzxIv1te?hideSocial=true" width="480" height="262.08" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bye-goodbye-the-little-rascals-GB0lKzzxIv1te">via GIPHY</a></p>',
+        ],
+
+
+        'mission_cont': [
+          'We\’re creating an education relevant to today’s industry where students gradually transition into the professional world.',
+          'We believe in learning by doing, at Make School studying takes a back seat to creating.',
+          'We believe the app is the new resume, a portfolio of products is more powerful than any credential.',
+          'We believe coding is the world’s first superpower, our students help make the world a better place.',
+          {
+            type: 'choose',
+            answers: [{
+
+              'text': 'Tell me about your team',
+              'path': 'team'
+            
+            }]
+          }
+        ],
+
+        'team': [
+          '<iframe src="http://i.imgur.com/PxsMwP0.jpg" width="480" height="262.08" frameborder="0"></iframe>',
+          'We\’ve grown to 23 people who joined the company from Hawaii, Michigan, Boston, Ohio, Chicago, New Jersey, Florida, Philippines, and Germany.',
+          'We\’ve previously worked at startups, small businesses, game companies and tech companies. We\’ve lectured and taught at MIT, Carnegie Mellon, UC Berkeley, Stanford and INSEAD. We frequently volunteer to teach beginners coding basics and mentor entrepreneurs building companies',
+          'We care deeply about improving computer science education, and sparking passion in students to build real products.',
+          
+          {
+            type: 'choose',
+            answers: [{
+
+              'text': 'Do you have any job openings?',
+              'path': 'jobs'
+            },
+              {
+
+              'text': 'How can I get in contact?',
+              'path': 'contact'
+            
+            }]
+          }
+        ],
+
+        'jobs': [
+          'We\’re always looking to add new and diverse perspectives to the team, if you’re passionate about computer science education we’d love to hear from you!',
+          'Please see our <a href="https://www.makeschool.com/jobs">jobs page</a> for open positions.',
+          
+          {
+            type: 'choose',
+            answers: [{
+
+              'text': 'How can I get in contact?',
+              'path': 'contact'
+            
+            }]
+          }
+        ],
+
+        'contact': [
+          'We\'d love to hear from you!',
+          'You can email us at <a href="mailto:hello@makeschool.com">hello@makeschool.com</a>',
+
+          
+          {
+            type: 'choose',
+            answers: [{
+
+              'text': 'Thanks!',
+              'path': 'finalmessage'
+            
+            }]
+          }
+        ],
+        
